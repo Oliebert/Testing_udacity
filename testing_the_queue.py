@@ -1,5 +1,5 @@
 import array
-import random
+# testing with PyTest
 
 
 class Queue:
@@ -11,7 +11,7 @@ class Queue:
         self.size = 0
         self.data = array.array('i', range(size_max))
         #Массивы очень похожи на списки, но с ограничением на тип данных и размер каждого элемента.
-        #   Размер и тип элемента в массиве определяется при его создании и может принимать следующие значения:
+        #   Размер и тип элемента в массиве определяется при его создании
 
     def empty(self):
         return self.size == 0
@@ -26,7 +26,7 @@ class Queue:
         self.tail += 1  # we moved the tail to point to the next element
         if self.tail == self.head:
             assert (self.size == 0) or (self.size == self.max)
-            assert self.tail%self.head ==0
+            assert self.tail % self.head == 0
         if self.tail == self.max:
             self.tail = 0  # reset the tail to the point at the zero element of the queue
 
@@ -60,7 +60,7 @@ class Queue:
 '''
 
 def test_checkRep():
-    q = Queue(3)
+    q = Queue(19)
 
     assert q.size >= 0 and q.size <= q.max
     if q.tail > q.head:
