@@ -59,6 +59,7 @@ class Queue:
         return
 '''
 
+
 def test_checkRep():
     q = Queue(19)
 
@@ -113,7 +114,6 @@ def test2():
         return True
     return False
     '''
-
     res = q.empty()
     if not res:  # if is the queue not empty
         print("test2.0 NOT OK")
